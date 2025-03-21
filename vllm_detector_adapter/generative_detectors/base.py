@@ -253,7 +253,7 @@ class ChatCompletionDetectionBase(OpenAIServingChat):
         # NOTE: We need top_logprobs to be enabled to calculate score appropriately
         # We override this and not allow configuration at this point. In future, we may
         # want to expose this configurable to certain range.
-        chat_completion_request.top_logprobs = 5
+        chat_completion_request.top_logprobs = 20
 
         logger.debug("Request to chat completion: %s", chat_completion_request)
 
